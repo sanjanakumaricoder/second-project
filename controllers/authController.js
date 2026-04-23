@@ -80,35 +80,5 @@ exports.login = async (req, res) => {
 
 
 
-// const User = require('../models/User');
-// const bcrypt = require('bcryptjs');
-// const jwt = require('jsonwebtoken');
 
-// // Sabse upar check karein ki 'exports' ki spelling sahi hai (s ke saath)
-// exports.register = async (req, res) => {
-//     try {
-//         console.log("Registering user..."); // Debugging ke liye
-//         const { name, phone, password, role, skill, location } = req.body;
-//         const hashedPassword = await bcrypt.hash(password, 10);
-//         await User.create({ name, phone, password: hashedPassword, role, skill, location });
-//         res.status(201).json({ message: "Success" });
-//     } catch (err) {
-//         res.status(400).json({ error: err.message });
-//     }
-// };
 
-// exports.login = async (req, res) => {
-//     try {
-//         console.log("Logging in..."); // Debugging ke liye
-//         const { phone, password } = req.body;
-//         const user = await User.findOne({ phone });
-//         if (user && (await bcrypt.compare(password, user.password))) {
-//             const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
-//             res.json({ token, user });
-//         } else {
-//             res.status(401).json({ error: "Fail" });
-//         }
-//     } catch (err) {
-//         res.status(500).json({ error: err.message });
-//     }
-// };
